@@ -14,8 +14,19 @@ internal class NotificationContentCreator(
     private val contactRepository: ContactRepository,
 ) {
     fun createFromMessage(account: Account, message: LocalMessage): NotificationContent {
-        val sender = getMessageSender(account, message)
+        //val sender = getMessageSender(account, message)
 
+        
+        //Obfuscate the sender, subject, and message content in the notification (for privacy).
+        return NotificationContent(
+            messageReference = message.makeMessageReference(),
+            sender = "New email received",
+            subject = "Open the app to read it",
+            preview = "...",
+            summary = "...",
+        )
+
+        /*
         return NotificationContent(
             messageReference = message.makeMessageReference(),
             sender = getMessageSenderForDisplay(sender),
@@ -23,6 +34,7 @@ internal class NotificationContentCreator(
             preview = getMessagePreview(message),
             summary = buildMessageSummary(sender, getMessageSubject(message)),
         )
+        */
     }
 
     private fun getMessagePreview(message: LocalMessage): CharSequence {
