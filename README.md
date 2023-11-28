@@ -5,7 +5,7 @@ This is a fork of the K-9 Mail app v6.603. I have modified the notifications del
 
 This is achieved by modifying these files:
 - app\core\src\main\java\com\fsck\k9\notification\NotificationContentCreator.kt
-- app/k9mail/src/main/AndroidManifest.xml (to modify the app's name)
+- app/k9mail/src/main/AndroidManifest.xml line 34 (to modify the app's name)
 ## Steps to build the apk (on Windows)
 - install jdk-17
 - install command-line-tools android sdk (https://developer.android.com/studio/index.html#command-line-tools-only)
