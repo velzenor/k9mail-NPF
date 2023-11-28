@@ -11,13 +11,13 @@ This is achieved by modifying these files: \
 - install command-line-tools android sdk (https://developer.android.com/studio/index.html#command-line-tools-only)
 - follow the steps here to build an android_sdk directory (https://developer.android.com/tools/sdkmanager)
 - use sdkmanager to install needed packages:
-   - sdkmanager.bat "build-tools;34.0.0"
-   - sdkmanager.bat "platforms;android-33"
+   - `sdkmanager.bat "build-tools;34.0.0"`
+   - `sdkmanager.bat "platforms;android-33"`
 - git clone this repo
-- create a new file named local.properties in the repo. Add the sdk directory location to the file:
-   - sdk.dir=C\:\\Users\\username\\path\\to\\android_sdk
+- create a new file named local.properties in the repo. Add the sdk directory location to the file. Make sure you escape the characters:
+   - `sdk.dir=C\:\\Users\\username\\path\\to\\android_sdk`
 - use the gradle wrapper to build a debug apk. First time takes a long time. Took 30+ minutes for me
-   - gradlew.bat assembleDebug
+   - `gradlew.bat assembleDebug`
 - the apk will be in located in app\k9mail\build\outputs\apk\debug\
 
 
