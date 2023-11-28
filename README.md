@@ -1,6 +1,6 @@
 # About This Fork
 
-This is a fork of the K-9 Mail app v6.603. I have modified the notifications delivered from this app. Now, when a new email is received, the notification will not display the contents nor the sender of the received email. This may be preferred in cases where the received email contains sensitive information.
+This is a fork of the K-9 Mail app v6.603. I have modified the notifications delivered from this app. Now, when a new email is received, neither the contents nor the sender of the received email will be displayed in the notification. This is preferred in cases where the received email has sensitive information.
 
 This is achieved by modifying these files:
 \app\core\src\main\java\com\fsck\k9\notification\NotificationContentCreator.kt
