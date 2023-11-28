@@ -14,7 +14,7 @@ This is achieved by modifying these files: \
    - sdkmanager.bat "build-tools;34.0.0"
    - sdkmanager.bat "platforms;android-33"
 - git clone this repo
-- edit the local.properties file to add the sdk directory location:
+- create a new file named local.properties in the repo. Add the sdk directory location to the file:
    - sdk.dir=C\:\\Users\\username\\path\\to\\android_sdk
 - use the gradle wrapper to build a debug apk. First time takes a long time. Took 30+ minutes for me
    - gradlew.bat assembleDebug
