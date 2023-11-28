@@ -1,9 +1,25 @@
-# About This Fork
+# README for this Fork
+## About This Fork
 
 This is a fork of the K-9 Mail app v6.603. I have modified the notifications delivered from this app. Now, when a new email is received, neither the contents nor the sender of the received email will be displayed in the notification. This is preferred in cases where the received email has sensitive information.
 
 This is achieved by modifying these files: \
 \app\core\src\main\java\com\fsck\k9\notification\NotificationContentCreator.kt
+
+## Steps to build the apk (on Windows)
+- install jdk-17
+- install command-line-tools android sdk (https://developer.android.com/studio/index.html#command-line-tools-only)
+- follow the steps here to build an android_sdk directory (https://developer.android.com/tools/sdkmanager)
+- use sdkmanager to install needed packages:
+   - sdkmanager.bat "build-tools;34.0.0"
+   - sdkmanager.bat "platforms;android-33"
+- git clone this repo
+- edit the local.properties file to add the sdk directory location:
+   - sdk.dir=C\:\\Users\\username\\path\\to\\android_sdk
+- use the gradle wrapper to build a debug apk. First time takes a long time. Took 30+ minutes for me
+   - gradlew.bat assembleDebug
+- the apk will be in located in app\k9mail\build\outputs\apk\debug\
+
 
 
 # Original README below:
