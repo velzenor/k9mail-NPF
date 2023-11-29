@@ -1,7 +1,7 @@
 # README for this Fork
 ## About This Fork
 
-This is a fork of the K-9 Mail app v6.603. I have modified the notifications delivered from this app. Now, when a new email is received, neither the contents nor the sender of the received email will be displayed in the notification. This is preferred in cases where the received email has sensitive information.
+This is a fork of the K-9 Mail app v6.603. I have modified the notifications delivered from this app. Now, when a new email is received, neither the contents nor the sender of the received email will be displayed in the notification. Instead, it will just say "New email received". This functionality is preferable when you expect your emails to have sensitive information.
 
 This is achieved by modifying these files:
 - app\core\src\main\java\com\fsck\k9\notification\NotificationContentCreator.kt
@@ -9,16 +9,16 @@ This is achieved by modifying these files:
 ## Steps to build the apk (on Windows)
 - install jdk-17
 - install command-line-tools android sdk (https://developer.android.com/studio/index.html#command-line-tools-only)
-- follow the steps here to build an android_sdk directory (https://developer.android.com/tools/sdkmanager)
+- follow the process to create an android_sdk directory (https://developer.android.com/tools/sdkmanager)
 - use sdkmanager to install needed packages:
    - `sdkmanager.bat "build-tools;34.0.0"`
    - `sdkmanager.bat "platforms;android-33"`
 - git clone this repo
-- create a new file named local.properties in the repo. Add the sdk directory location to the file. Make sure you escape the characters:
+- create a new file named local.properties in the repo. Add the sdk directory location to the file (use escape characters):
    - `sdk.dir=C\:\\Users\\username\\path\\to\\android_sdk`
-- use the gradle wrapper to build a debug apk. First time takes a long time. Took 30+ minutes for me
+- use the gradle wrapper to build an unsigned debug apk. First time may take a long time. Took 30+ minutes for me
    - `gradlew.bat assembleDebug`
-- the apk will be in located in app\k9mail\build\outputs\apk\debug\
+- the built apk will be in app\k9mail\build\outputs\apk\debug\
 
 
 
